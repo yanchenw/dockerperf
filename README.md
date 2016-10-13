@@ -33,7 +33,7 @@ To see volume mapping overhead on mac and windows, please following the steps be
   docker-compose src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml up --force-recreate --build -d
   ```
 
-  Now you have two running images, the only difference is one have no volume mapping while the other one has the entire published application volume mapped to /app directory.
+  Now you have two running containers, the only difference is one have no volume mapping while the other one has the entire published application volume mapped to /app directory.
 7. Execute bash in each of the running container, measure the web application start up time
 
   ```
