@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  dockerperf:
+  dockerperf.volume.mapped:
     image: user/dockerperf.volume.mapped
     build:
       context: .
@@ -9,4 +9,5 @@ services:
     volumes:
       - .:/app
     ports:
-      - "35001:80"
+      - "35002:80"
+    entrypoint: tail -f /dev/null

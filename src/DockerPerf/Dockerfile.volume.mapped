@@ -1,6 +1,10 @@
 FROM microsoft/aspnetcore:1.0.1
 
-ENTRYPOINT ["dotnet", "DockerPerf.dll"]
+RUN ["apt-get", "update"]
+
+RUN ["apt-get", "install", "-y", "npm", "nodejs-legacy"]
+
+RUN ["npm", "install", "-g", "gnomon"]
 
 WORKDIR /app
 
