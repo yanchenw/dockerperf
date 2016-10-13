@@ -8,4 +8,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - "35001:80"
-    entrypoint: tail -f /dev/null

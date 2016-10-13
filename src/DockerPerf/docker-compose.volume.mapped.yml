@@ -10,4 +10,3 @@ services:
       - .:/app
     ports:
       - "35002:80"
-    entrypoint: tail -f /dev/null
