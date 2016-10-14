@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7821A4FE-8936-4732-8BB7-E2F299CC1CA5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DockerPerf", "src\DockerPerf.xproj", "{46A3D98C-5CDC-42AB-A642-6CD8F8D2B2B1}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DockerPerf", "src\DockerPerf\DockerPerf.xproj", "{46A3D98C-5CDC-42AB-A642-6CD8F8D2B2B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
