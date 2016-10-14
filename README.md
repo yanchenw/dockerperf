@@ -5,7 +5,8 @@ To see volume mapping overhead on mac and windows, please following the steps be
 #### Prereqs:
 1. Dotnet SDK: https://www.microsoft.com/net/core#windows
 2. Install Docker on Mac / Docker for Windows on Windows.
-
+3. On Mac, install gnomon utility
+   npm install -g gnomon
 
 #### Steps:
 
