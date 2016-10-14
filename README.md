@@ -34,5 +34,13 @@ To see volume mapping overhead on mac and windows, please following the steps be
   docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml build
   ```
 
-7. On Windows machine, execute TestWindows.ps1 in a powershell window
-  On Mac, execute TestMac.sh in a console window
+7. On Windows machine, execute the following commands in a powershell window:
+  ```
+  .\TestWindows
+  .\TestWindows -v
+  ```
+  On Mac, execute the following commands in a console window
+  ```
+  .\TestMac
+  .\TestMac -v
+  ```
