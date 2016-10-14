@@ -1,6 +1,6 @@
 # Checks if the URL is responding
 function WaitForUrl ([string]$uri) {
-    Write-Host "Opening site $uri " -NoNewline
+    Write-Host "Opening site $uri"
     $status = 0
     $count = 0
 
@@ -19,11 +19,14 @@ function WaitForUrl ([string]$uri) {
     Write-Host "Connected successfully."
 }
 
+
 Write-Host "Testing w/o volume mapping:"
 measure-command {
     docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml up -d
     WaitForUrl http://localhost:35001
 }
+
+docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml down --remove-orphans
 
 Write-Host
 Write-Host
@@ -32,3 +35,5 @@ measure-command {
     docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml up -d
     WaitForUrl http://localhost:35002
 }
+
+docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml down --remove-orphans
