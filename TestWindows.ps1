@@ -8,7 +8,7 @@ function WaitForUrl ([string]$uri) {
     while ($status -ne 200) {
         try {
             Write-Verbose "Trying to connect to $uri ($count/120)"
-            $response = Invoke-WebRequest -Uri $uri -Headers @{"Cache-Control"="no-cache";"Pragma"="no-cache"} -UseBasicParsing -Verbose:$false
+            $response = Invoke-WebRequest -Uri $uri -Headers @{"Cache-Control"="no-cache";"Pragma"="no-cache"} -Verbose:$false
             $status = [int]$response.StatusCode
         }
         catch [System.Net.WebException] { }
