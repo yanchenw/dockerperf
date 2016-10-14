@@ -1,4 +1,4 @@
-params([switch]$v = $false)
+param([switch]$v = $false)
 
 # Checks if the URL is responding
 function WaitForUrl ([string]$uri) {
