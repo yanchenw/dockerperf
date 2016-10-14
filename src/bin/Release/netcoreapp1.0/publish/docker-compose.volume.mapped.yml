@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  dockerperf.volume.mapped:
+    image: user/dockerperf.volume.mapped
+    build:
+      context: .
+      dockerfile: Dockerfile.volume.mapped
+    volumes:
+      - .:/app
+    ports:
+      - "35002:80"
