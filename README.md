@@ -26,33 +26,12 @@ To see volume mapping overhead on mac and windows, please following the steps be
   ```
   dotnet publish src/DockerPerf -c Release
   ```
-6. Call docker-compose up for both non-volume-mapped image and the volume-mapped image
+6. Build images for both non-volume-mapped image and the volume-mapped image
 
   ```
-  docker-compose src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml up --force-recreate --build -d
-  docker-compose src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml up --force-recreate --build -d
+  docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml build
+  docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml build
   ```
 
-  Now you have two running containers, the only difference is one have no volume mapping while the other one has the entire published application volume mapped to /app directory.
-7. Execute bash in each of the running container, measure the web application start up time
-
-  ```
-  docker exec -it bash publish_dockerperf_1
-  dotnet DockerPerf.dll | gnomon -t elapsed-total
-  
-  docker exec -it bash publish_dockerperf.volume.mapped_1
-  dotnet DockerPerf.dll | gnomon -t elapsed-total
-  ```
-
-  You'll see the output as below:
-
-  ```
-  root@b3ece2a02047:/app# dotnet DockerPerf.dll | gnomon -t elapsed-total
-   0.4105s   Hosting environment: Production
-   0.4117s   Content root path: /app
-   0.4122s   Now listening on: http://+:80
-   3.4163s   Application started. Press Ctrl+C to shut down.
-  ```
-  The time before "Now listening on: http://+:80" will be the time spent to start the web server, in this case 0.4122s.
-
-
+7. On Windows machine, execute TestWindows.ps1 in a powershell window
+  On Mac, execute TestMac.sh in a console window

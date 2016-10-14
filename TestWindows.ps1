@@ -21,7 +21,7 @@ function WaitForUrl ([string]$uri) {
 
 Write-Host "Testing w/o volume mapping:"
 measure-command {
-    docker-compose -f src/bin/Release/netcoreapp1.0/publish/docker-compose.yml up -d
+    docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml up -d
     WaitForUrl http://localhost:35001
 }
 
@@ -29,6 +29,6 @@ Write-Host
 Write-Host
 Write-Host "Testing w/ volume mapping:"
 measure-command {
-    docker-compose -f src/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml up -d
+    docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml up -d
     WaitForUrl http://localhost:35002
 }
