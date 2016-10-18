@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  musicstore:
+    image: user/musicstore
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "35003:80"

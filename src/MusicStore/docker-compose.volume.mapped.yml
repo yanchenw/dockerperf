@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  musicstore.volume.mapped:
+    image: user/musicstore.volume.mapped
+    build:
+      context: .
+      dockerfile: Dockerfile.volume.mapped
+    volumes:
+      - .:/app
+    ports:
+      - "35004:80"
