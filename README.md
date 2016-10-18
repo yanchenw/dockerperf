@@ -35,12 +35,18 @@ To see volume mapping overhead on mac and windows, please following the steps be
 5. On Windows machine, execute the following commands in a powershell window:
 
   ```
+  # to test w/o volume mapping
   .\TestWindows
+
+  # to test w/ volume mapping
   .\TestWindows -v
   ```
   On Mac, execute the following commands in a console window
 
   ```
+  # to test w/o volume mapping
   .\TestMac
+
+  # to test w/ volume mapping
   .\TestMac -v
   ```
