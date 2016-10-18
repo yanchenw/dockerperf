@@ -9,7 +9,7 @@ function WaitForUrl ([string]$uri) {
     #Check if the site is available
     while ($status -ne 200) {
         try {
-            Write-Verbose "Trying to connect to $uri ($count/120)"
+            Write-Verbose "Trying to connect to $uri ($count)"
             $response = Invoke-WebRequest -Uri $uri -Headers @{"Cache-Control"="no-cache";"Pragma"="no-cache"} -Verbose:$false
             $status = [int]$response.StatusCode
         }
