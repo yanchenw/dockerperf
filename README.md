@@ -28,13 +28,13 @@ To see volume mapping overhead on mac and windows, please following the steps be
 5. Publish the application
 
   ```
-  dotnet publish src/DockerPerf -c Release
+  dotnet publish src/MusicStore -c Release
   ```
 6. Build images for both non-volume-mapped image and the volume-mapped image
 
   ```
-  docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.yml build
-  docker-compose -f src/DockerPerf/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml build
+  docker-compose -f src/MusicStore/bin/Release/netcoreapp1.0/publish/docker-compose.yml build
+  docker-compose -f src/MusicStore/bin/Release/netcoreapp1.0/publish/docker-compose.volume.mapped.yml build
   ```
 
 7. On Windows machine, execute the following commands in a powershell window:
