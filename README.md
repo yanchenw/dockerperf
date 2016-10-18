@@ -20,8 +20,17 @@ To see volume mapping overhead on mac and windows, please following the steps be
   ```
   npm install -g bower
   ```
-4. On Windows, run .\Build.ps1 in a powershell window
-   On Linux, run .\Build.sh in a console window
+4. On Windows, run the following command in a powershell window
+
+  ```
+  .\Build.ps1
+  ```
+
+  On Linux, run the following command in a console window
+
+  ```
+  .\Build.sh
+  ```
 
 5. On Windows machine, execute the following commands in a powershell window:
 
