@@ -4,7 +4,7 @@ To see volume mapping overhead on mac and windows, please following the steps be
 
 #### Prereqs:
 1. Dotnet SDK: https://www.microsoft.com/net/core#windows
-2. Install Docker on Mac / Docker for Windows on Windows.
+2. Install Docker for Mac/Windows.
 3. On Mac, install gnomon utility
 
   ```
@@ -15,12 +15,7 @@ To see volume mapping overhead on mac and windows, please following the steps be
 
 1. Clone this repo
 2. Open console, go to the root of the repo
-3. Install bower globally
-
-  ```
-  npm install -g bower
-  ```
-4. On Windows, run the following command in a powershell window
+3. On Windows, run the following command in a powershell window
 
   ```
   .\Build.ps1
@@ -32,7 +27,7 @@ To see volume mapping overhead on mac and windows, please following the steps be
   .\Build.sh
   ```
 
-5. On Windows machine, execute the following commands in a powershell window:
+4. On Windows machine, execute the following commands in a powershell window:
 
   ```
   # to test w/o volume mapping
